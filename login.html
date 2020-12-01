@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="274366346838-6aj7392e77k4k5v3egjhnbgsmt0cif2v.apps.googleusercontent.com">
+  <style>
+    html, body{
+      height: 100%;
+    }
+
+    body {
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body class="text-center">
+  <img src="img\login.png">
+  <h1>Ingrese por favor</h1><br>
+  <form action="" id="userInfo">
+    <input type="text" id="userBox" name="userBox" placeholder="Nombre de Usuario" required autofocus><br>
+    <input type="password" id="elPassword" name="elPassword" placeholder="Contraseña" required><br><br>
+    <button type="submit" id="butts">Ingresar</button>
+  </form><br><br>
+  <div class="g-signin2" data-onsuccess="onSignIn" align="center" id="signin"></div><br>
+  <a href="#" onclick="signOut();" align="center">Sign out</a>
+  <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
+  <script>
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId());
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail());
+      var id_token = googleUser.getAuthResponse().id_token;
+    };
+
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    };
+  </script>
+</body>
+</html>

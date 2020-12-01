@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="site-header sticky-top py-1 bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between" id="coso">
+      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+    </div>
+  </nav>
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción:</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Cantidad de unidades vendidas:</dt>
+        <dd>
+          <p id="productCount"></p>
+        </dd>
+
+        <dt>Precio:</dt>
+        <dd>
+          <p id="productPrice"></p>
+        </dd>
+
+        <dt>Imagenes del producto:</dt>
+        <dd>
+          <br>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8">
+                <div id="my-slider" class="carousel slide" data-ride="carousel">
+
+                  <ol class="carousel-indicators" id="productImagesGallery1">
+
+                  </ol>
+
+                  <div class="carousel-inner" role="listbox" id="productImagesGallery2">
+                    
+                  </div>
+
+                  <a class="carousel-control-prev" href="#my-slider" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#my-slider" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </dd>
+        <dt>Productos Relacionados:</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="related-list-container">
+          </div>
+        </dd>
+      </dl>
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver todos los productos</a><br><br>
+      <div class="row m-3">
+        <div class="list-group" id="comm-list-container">
+        </div>
+      </div>
+      <div class="container">
+        <div class="text-center p-4">
+          <h2>Dejanos un comentario!</h2>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-md-8 order-md-1">
+            <form class="needs-validation" id="comment-info" action="/action_page.php" method="POST">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="productName">Nombre</label>
+                  <input type="text" class="form-control" id="userName" placeholder="" value="" >
+                  <div class="invalid-feedback">
+                    Ingresa un nombre
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+              </div>
+              <div class="row">
+                  <div class="col-md-12 mb-3">
+                      <label for="productDescription">Comentarios sobre el producto</label>
+                      <textarea class="form-control" id="userComment" rows="3"></textarea>
+                  </div>
+                </div>
+              <div class="d-block my-3">
+                <p>Clasificación del producto:</p>
+                <div class="custom-control custom-radio rating">
+                  <input type="radio" id="unaS" name="starValue" required="" value="5">
+                  <label for="unaS"></label>
+                  <input type="radio" id="dosS" name="starValue" required="" value="4">
+                  <label for="dosS"></label>
+                  <input type="radio" id="tresS" name="starValue" required="" value="3">
+                  <label for="tresS"></label>
+                  <input type="radio" id="cuatroS" name="starValue" required="" value="2">
+                  <label for="cuatroS"></label>
+                  <input type="radio" id="cincoS" name="starValue" required="" value="1">
+                  <label for="cincoS"></label>
+                </div>
+                <br><br><br>
+              </div>
+              <button class="btn btn-primary btn-lg" type="button" id="crik">Comentar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/product-info.js"></script>
+</body>
+
+</html>

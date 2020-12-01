@@ -1,0 +1,23 @@
+{
+  "name": "workspace_inicial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramuzai/Workspace_inicial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramuzai/Workspace_inicial/issues"
+  },
+  "homepage": "https://github.com/ramuzai/Workspace_inicial#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
